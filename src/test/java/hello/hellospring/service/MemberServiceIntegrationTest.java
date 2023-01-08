@@ -2,10 +2,7 @@ package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
-import hello.hellospring.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,13 +19,11 @@ class MemberServiceIntegrationTest {
     @Autowired
     MemberRepository memberRepository;
 
-
-
     @Test
     void join() {
         //given
         Member member1 = new Member();
-        member1.setName("hello2");
+        member1.setName("hello1213");
 
         //when
         Long saveId = memberService.join(member1);
